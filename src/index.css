@@ -1,0 +1,38 @@
+/* Light */
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --primary-color: #0057B7;
+  --secondary-color: #00CFFF;
+}
+
+/* Dark */
+body.dark {
+  --bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --primary-color: #0ea5e9;
+  --secondary-color: #22d3ee;
+}
+
+/* Blue Cyan */
+body.blue-theme {
+  --bg-color: #e0f7ff;
+  --text-color: #003f8a;
+  --primary-color: #00cfff;
+  --secondary-color: #0057B7;
+}
+
+/* Violet Futuriste */
+body.violet-theme {
+  --bg-color: #f3e8ff;
+  --text-color: #4c1d95;
+  --primary-color: #a78bfa;
+  --secondary-color: #7c3aed;
+}
+
+/* Appliquer les variables globalement */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,63 @@
+/* Variables pour tous les thèmes */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --primary-color: #0057B7;
+  --accent-color: #FFD700;
+}
+
+/* Thèmes */
+.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --primary-color: #0057B7;
+  --accent-color: #FFD700;
+}
+
+.theme-dark {
+  --bg-color: #0f172a;
+  --text-color: #e2e8f0;
+  --primary-color: #00FF88;
+  --accent-color: #FFD700;
+}
+
+.theme-blue {
+  --bg-color: #001f3f;
+  --text-color: #f0f9ff;
+  --primary-color: #00C2CB;
+  --accent-color: #FFD700;
+}
+
+.theme-purple {
+  --bg-color: #1a002b;
+  --text-color: #f0f0ff;
+  --primary-color: #6C63FF;
+  --accent-color: #FFD700;
+}
+
+/* Application */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+button:hover {
+  opacity: 0.8;
+}
