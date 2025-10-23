@@ -1,33 +1,97 @@
-# SKILLED IT React Project
+Installation
 
-Projet React multi-langues pour la gestion des cours, avec carrousel, formulaire de contact, et interface responsive.
+Clonez le dépôt :
 
----
+git clone <URL_DE_VOTRE_REPO>
 
-## Prérequis
 
-- Node.js (v16+ recommandé)
-- npm (v8+ recommandé)
+Accédez au répertoire du projet :
 
-Vérifiez vos versions :
+cd skilled-it-react
 
-```bash
-node -v
-npm -v
 
-# React + Vite
+Installez les dépendances :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+npm install
 
-Currently, two official plugins are available:
+Exécution en développement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pour lancer le serveur en mode développement :
 
-## React Compiler
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+Le projet sera accessible sur :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+http://localhost:5173
+
+
+Le projet se recharge automatiquement lors des modifications du code.
+
+Structure du projet
+src/
+├─ assets/
+│  └─ images/          # Images pour le carrousel et les cours
+├─ components/
+│  ├─ Hero.jsx         # Section principale avec carrousel et infos du programme
+│  ├─ CourseCard.jsx   # Carte d’un cours
+│  └─ Footer.jsx       # Pied de page avec contacts et copyright
+├─ contexts/
+│  └─ LanguageContext.jsx # Gestion de la langue (EN/AR)
+├─ data/
+│  └─ coursesData.js   # Informations des cours et programme
+├─ pages/
+│  ├─ Home.jsx
+│  ├─ Courses.jsx
+│  └─ Contact.jsx
+└─ App.jsx
+
+Fonctionnalités
+
+Multi-langues : Anglais / Arabe, avec bascule via bouton.
+
+Page Courses :
+
+Recherche par titre
+
+Cartes de cours avec niveau, durée, objectifs et description
+
+Page Contact :
+
+Formulaire avec nom, email, sujet et message
+
+Support RTL pour l’arabe
+
+Hero :
+
+Carrousel automatique avec flèches
+
+Texte centré, multi-langues
+
+Header & Footer :
+
+Header sticky, navigation centrée
+
+Footer avec informations de contact et droits d’auteur
+
+Design :
+
+Carte Program Info avec icônes bleues
+
+Responsive et agréable visuellement
+
+Commandes utiles
+Commande	Description
+npm install	Installer les dépendances
+npm run dev	Lancer le serveur de développement
+npm run build	Compiler pour la production
+npm run lint	Vérifier le code avec ESLint
+Notes importantes
+
+Les images doivent être placées dans src/assets/images/.
+
+Les icônes sont importées depuis react-icons.
+
+La langue par défaut est l’anglais.
+
+Le texte arabe est correctement aligné à droite dans toutes les sections concernées.
