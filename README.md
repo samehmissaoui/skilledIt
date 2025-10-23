@@ -1,3 +1,20 @@
+# SKILLED IT React Project
+
+Projet React multi-langues pour la gestion des cours, avec carrousel, formulaire de contact, et interface responsive.
+
+---
+
+## Prérequis
+
+- Node.js (v16+ recommandé)
+- npm (v8+ recommandé)
+
+Vérifiez vos versions :
+
+```bash
+node -v
+npm -v
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
