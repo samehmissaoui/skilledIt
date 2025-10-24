@@ -1,0 +1,67 @@
+@use '../variables' as *;
+
+.contact-section {
+  padding: $spacing-xl $spacing-lg;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 { 
+    font-size: 2rem; 
+    margin-bottom: $spacing-xl; 
+    color: $color-primary-violet; 
+    text-align: center; // <-- centré
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    align-items: center; // <-- centre tous les éléments horizontalement
+
+    .contact-row { 
+      display: flex; 
+      gap: $spacing-md;
+      width: 100%; // pour que les inputs prennent toute la largeur
+
+      input { 
+        flex: 1; 
+        padding: 0.7rem 1rem; 
+        border-radius: $border-radius-md; 
+        border: 1px solid $color-dark-gray; 
+      }
+    }
+
+    input, textarea { 
+      padding: 0.7rem 1rem; 
+      border-radius: $border-radius-md; 
+      border: 1px solid $color-dark-gray; 
+      resize: vertical; 
+      width: 100%; // pour remplir la ligne
+    }
+
+    button {
+      padding: 0.8rem 1.5rem; 
+      background-color: $color-primary-violet; 
+      color: $color-white; 
+      border: none;
+      border-radius: $border-radius-md; 
+      font-weight: bold; 
+      cursor: pointer; 
+      align-self: center; // <-- bouton centré
+      transition: background-color 0.3s ease;
+
+      &:hover { 
+        background-color: darken($color-primary-violet, 15%); 
+      }
+    }
+  }
+
+  &.rtl { 
+    direction: rtl; 
+    text-align: right;
+
+    form button { 
+      align-self: center; // reste centré même en RTL
+    }
+  }
+}

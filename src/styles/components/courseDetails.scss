@@ -1,0 +1,45 @@
+.course-section {
+  margin-top: $spacing-xl;
+
+  .section-title {
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    margin-bottom: 0.5rem;
+    font-weight: 600; 
+    font-size: 1.2rem; 
+    color: $color-primary-violet;
+    border-bottom: 2px solid $color-light-gray; 
+    padding-bottom: 0.3rem;
+
+    // couleur des icônes dans le titre
+    svg {
+      color: $color-primary-orange;
+    }
+  }
+
+  p, ul {
+    font-size: 1rem; 
+    color: $color-dark-gray; 
+    line-height: 1.6; 
+    margin-bottom: $spacing-md;
+
+    ul { 
+      padding-left: $spacing-lg;
+
+      li {
+        margin-bottom: 0.5rem; 
+        position: relative;
+
+        &::before {
+          content: "•"; 
+          color: $color-primary-violet;
+          font-weight: bold; 
+          display: inline-block; 
+          width: 1em; 
+          margin-left: -1em;
+        }
+      }
+    }
+  }
+}

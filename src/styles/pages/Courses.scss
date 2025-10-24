@@ -1,0 +1,68 @@
+@use '../variables' as *;
+
+.courses-section {
+  padding: $spacing-xl $spacing-lg;
+  background-color: $color-light-gray;
+
+  h1 {
+    text-align: center;
+    color: $color-primary-violet;
+    margin-bottom: $spacing-xl;
+    font-size: 2.2rem;
+    font-family: $font-heading;
+  }
+
+  &.rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .courses-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-xl;
+
+    input {
+      width: 300px;
+      padding: $spacing-sm $spacing-md;
+      border-radius: $border-radius-md;
+      border: 1px solid $color-dark-gray;
+      font-size: 1rem;
+      font-family: $font-main;
+      text-align: left;
+
+      .rtl & {
+        text-align: right;
+      }
+    }
+  }
+
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-xl;
+
+    .no-courses {
+      text-align: center;
+      font-size: 1rem;
+      color: $color-dark-gray;
+      font-family: $font-main;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .courses-section {
+    padding: $spacing-lg $spacing-md;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .courses-search input {
+      width: 100%;
+    }
+  }
+}

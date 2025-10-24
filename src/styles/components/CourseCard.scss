@@ -1,0 +1,70 @@
+@use '../variables' as *;
+
+.course-card {
+  background-color: $color-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  }
+
+  &__image {
+    height: 180px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__content {
+    padding: $spacing-md;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: $spacing-sm;
+    color: $color-dark-gray;
+  }
+
+  &__info {
+    font-size: 0.95rem;
+    color: $color-dark-gray;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &__description {
+    margin-top: $spacing-sm;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+
+    &-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: $color-dark-gray;
+    }
+  }
+}

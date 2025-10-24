@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import Hero from "../components/Hero";
+import ProgramInfoCard from "../components/ProgramInfoCard";
 
 // Composant Home : page d'accueil du site
 export default function Home() {
@@ -8,7 +9,9 @@ export default function Home() {
   const { t } = useContext(LanguageContext);
 
   return (
-    // Affiche uniquement le composant Hero sur la page d'accueil
-    <Hero></Hero>
+<>
+<Hero></Hero>
+<ProgramInfoCard></ProgramInfoCard>
+</>    
   );
 }

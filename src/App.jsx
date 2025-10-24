@@ -5,10 +5,14 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
+import CourseDetails from "./pages/CourseDetails";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 export default function App() {
   return (
     <Router>
+        <ScrollToTop />
       <div
         style={{
           display: "flex",
@@ -22,6 +26,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/courses/:id" element={<CourseDetails />} />
+
           </Routes>
         </main>
         <Footer />

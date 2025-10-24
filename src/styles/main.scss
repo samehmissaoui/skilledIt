@@ -1,0 +1,19 @@
+// main.scss
+
+// 🌍 Variables, mixins et globals
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'globals' as *; // globals peut maintenant utiliser les variables
+
+// 🧱 Composants
+@use 'components/header' as *;
+@use 'components/footer' as *;
+@use 'components/courseCard' as *;
+@use 'components/hero' as *;
+@use 'components/ProgramInfoCard' as *;
+
+// 📄 Pages
+@use 'pages/home' as *;
+@use 'pages/courses' as *;
+@use 'pages/contact' as *;
+@use 'pages/courseDetails' as *;
