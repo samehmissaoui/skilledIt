@@ -1,57 +1,65 @@
-@use '../variables' as *;
-
 .contact-section {
-  padding: $spacing-xl $spacing-lg;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 3rem 2rem; // valeurs fixes au lieu de $spacing-xl $spacing-lg
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 { 
     font-size: 2rem; 
-    margin-bottom: $spacing-xl; 
-    color: $color-primary-violet; 
-    text-align: center; // <-- centré
+    margin-bottom: 2rem; // tu peux garder $spacing-xl remplacé par fixe
+    color: #4B2BA6; // couleur fixe pour $color-primary-violet
+    text-align: center;
+  }
+
+  .contact-card {
+    background-color: #ffffff; // $color-white
+    padding: 2rem; // équivalent de $spacing-xl
+    border-radius: 12px; // $border-radius-lg
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); // $shadow-md
+    width: 100%;
+    max-width: 600px;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
-    align-items: center; // <-- centre tous les éléments horizontalement
+    gap: 1rem; // $spacing-md
+    width: 100%;
 
     .contact-row { 
       display: flex; 
-      gap: $spacing-md;
-      width: 100%; // pour que les inputs prennent toute la largeur
+      gap: 1rem; // $spacing-md
+      width: 100%; 
 
       input { 
         flex: 1; 
         padding: 0.7rem 1rem; 
-        border-radius: $border-radius-md; 
-        border: 1px solid $color-dark-gray; 
+        border-radius: 8px; // $border-radius-md
+        border: 1px solid #1E1E2F; // $color-dark-gray
       }
     }
 
     input, textarea { 
       padding: 0.7rem 1rem; 
-      border-radius: $border-radius-md; 
-      border: 1px solid $color-dark-gray; 
+      border-radius: 8px; 
+      border: 1px solid #1E1E2F; 
       resize: vertical; 
-      width: 100%; // pour remplir la ligne
+      width: 100%; 
     }
 
     button {
       padding: 0.8rem 1.5rem; 
-      background-color: $color-primary-violet; 
-      color: $color-white; 
+      background-color: #4B2BA6; // $color-primary-violet
+      color: #ffffff; // $color-white
       border: none;
-      border-radius: $border-radius-md; 
+      border-radius: 8px; 
       font-weight: bold; 
       cursor: pointer; 
-      align-self: center; // <-- bouton centré
+      align-self: center;
       transition: background-color 0.3s ease;
 
       &:hover { 
-        background-color: darken($color-primary-violet, 15%); 
+        background-color: #3a1e86; // version plus foncée du violet
       }
     }
   }
@@ -61,7 +69,7 @@
     text-align: right;
 
     form button { 
-      align-self: center; // reste centré même en RTL
+      align-self: center; 
     }
   }
 }

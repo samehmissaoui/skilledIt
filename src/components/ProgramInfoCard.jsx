@@ -16,7 +16,7 @@ export default function ProgramInfoCard() {
       <p><FaLaptop /> <strong>{language === "en" ? "Modes:" : "طرق التدريب:"}</strong> {coursesData.programInfo.modes}</p>
       <p><FaLanguage /> <strong>{language === "en" ? "Languages:" : "لغات التدريب:"}</strong> {coursesData.programInfo.languages}</p>
 
-      <h3>{language === "en" ? "Program Objectives:" : "الأهداف العامة للبرنامج:"}</h3>
+      <h3>{language === "en" ? "Program Objectives" : "الأهداف العامة للبرنامج"}</h3>
       <ul>
         {coursesData.programInfo.programObjectives[language].map((obj, index) => (
           <li key={index}><FaCheckCircle /> {obj}</li>
@@ -24,4 +24,4 @@ export default function ProgramInfoCard() {
       </ul>
     </div>
   );
-}
+} 

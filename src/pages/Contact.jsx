@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import "../styles/main.scss"; // Import global SCSS
-import logo from "../assets/images/logoo.jpeg";
+
 
 export default function Contact() {
   const { language } = useContext(LanguageContext);
@@ -23,52 +23,53 @@ export default function Contact() {
 
   return (
     <section className="contact-section">
-      <h2>{language === "en" ? "Contact Page" : "صفحة الاتصال"}</h2>
+  <h2>{language === "en" ? "Contact Page" : "صفحة الاتصال"}</h2>
 
-      <form onSubmit={handleSubmit}>
-        <div className="contact-row">
-          <input
-            type="text"
-            name="name"
-            placeholder={language === "en" ? "Name" : "الاسم"}
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder={language === "en" ? "Email" : "البريد الإلكتروني"}
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
+  <div className="contact-card">
+    <form onSubmit={handleSubmit}>
+      <div className="contact-row">
         <input
           type="text"
-          name="subject"
-          placeholder={language === "en" ? "Subject" : "الموضوع"}
-          value={formData.subject}
+          name="name"
+          placeholder={language === "en" ? "Name" : "الاسم"}
+          value={formData.name}
           onChange={handleChange}
           required
         />
-
-        <textarea
-          name="message"
-          placeholder={language === "en" ? "Message" : "الرسالة"}
-          value={formData.message}
+        <input
+          type="email"
+          name="email"
+          placeholder={language === "en" ? "Email" : "البريد الإلكتروني"}
+          value={formData.email}
           onChange={handleChange}
-          rows={6}
           required
         />
+      </div>
 
-        <button type="submit">
-          {language === "en" ? "Send Message" : "إرسال الرسالة"}
-        </button>
-      </form>
+      <input
+        type="text"
+        name="subject"
+        placeholder={language === "en" ? "Subject" : "الموضوع"}
+        value={formData.subject}
+        onChange={handleChange}
+        required
+      />
 
-   
-    </section>
+      <textarea
+        name="message"
+        placeholder={language === "en" ? "Message" : "الرسالة"}
+        value={formData.message}
+        onChange={handleChange}
+        rows={6}
+        required
+      />
+
+      <button type="submit">
+        {language === "en" ? "Send Message" : "إرسال الرسالة"}
+      </button>
+    </form>
+  </div>
+</section>
+
   );
 }

@@ -5,8 +5,10 @@
   border-radius: $border-radius-lg;
   box-shadow: $shadow-md;
   padding: $spacing-lg;
-  margin-bottom: $spacing-xl;
+  margin: $spacing-xl auto; // ✅ centre la card horizontalement
   text-align: left;
+  max-width: 800px; // ✅ limite la largeur pour un rendu propre et centré
+  width: 90%; // ✅ responsive sur mobile
 
   &.rtl {
     direction: rtl;
@@ -14,11 +16,12 @@
   }
 
   h2 {
-    color: $color-primary-violet;
+    color: $color-primary-violet; 
     margin-bottom: $spacing-md;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    justify-content: center; // ✅ centre le titre dans la card
   }
 
   p {
@@ -26,12 +29,16 @@
     align-items: center;
     gap: 0.5rem;
     margin-bottom: $spacing-sm;
+    color: $color-dark-gray; 
 
-    svg { color: $color-primary-orange; } // icônes orange
+    svg {
+      color: $color-primary-orange;
+    }
   }
 
   h3 {
     margin-top: $spacing-md;
+    text-align: center; // ✅ centre le sous-titre
   }
 
   ul {
@@ -41,8 +48,11 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+       color: $color-dark-gray; 
 
-      svg { color: $color-primary-orange; } // icônes orange
+      svg {
+        color: $color-primary-orange;
+      }
     }
   }
 }

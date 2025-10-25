@@ -11,7 +11,8 @@
 @use 'components/courseCard' as *;
 @use 'components/hero' as *;
 @use 'components/ProgramInfoCard' as *;
-
+@use 'components/methodologySection.scss' as *;
+@use 'components/studentsSection.scss' as *;
 // 📄 Pages
 @use 'pages/home' as *;
 @use 'pages/courses' as *;

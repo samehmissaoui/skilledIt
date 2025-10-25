@@ -6,6 +6,9 @@
   box-shadow: $shadow-md;
   overflow: hidden;
   width: 300px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -24,19 +27,21 @@
       object-fit: cover;
       transition: transform 0.5s ease;
 
-      &:hover {
-        transform: scale(1.1);
-      }
+      &:hover { transform: scale(1.1); }
     }
   }
 
   &__content {
-    padding: $spacing-md;
+    padding: 1rem; // exemple fixe
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__title {
     font-size: 1.2rem;
-    margin-bottom: $spacing-sm;
+    margin-bottom: 0.5rem;
     color: $color-dark-gray;
   }
 
@@ -48,10 +53,14 @@
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.3rem;
+
+    svg {
+      color: $color-primary-orange; // <-- icône colorée en orange
+    }
   }
 
   &__description {
-    margin-top: $spacing-sm;
+    margin-top: 0.5rem;
 
     &-title {
       display: flex;
@@ -59,6 +68,10 @@
       gap: 0.5rem;
       font-weight: bold;
       margin-bottom: 0.3rem;
+
+      svg {
+        color: $color-primary-orange; // <-- icône colorée en orange
+      }
     }
 
     &-text {

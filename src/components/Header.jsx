@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageContext } from "../contexts/LanguageContext";
-import logo from "../assets/images/logoo.jpeg";
+import logo from "../assets/images/logo.png";
 import { FaGlobe } from "react-icons/fa";
 import "../styles/main.scss"; // Import du SCSS
 
@@ -14,7 +14,7 @@ export default function Header() {
     { path: "/courses", label: "courses" },
     { path: "/contact", label: "contact" },
   ];
-
+ 
   return (
     <header className="header">
       <div className="header__logo">
@@ -35,6 +35,7 @@ export default function Header() {
         <FaGlobe
           onClick={toggleLanguage}
           className="header__lang-icon"
+          size={50} // taille en pixels, ajuste à ton goût
           title={`Changer la langue (${language === "en" ? "AR" : "EN"})`}
         />
       </nav>
